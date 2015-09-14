@@ -26,7 +26,7 @@ with williams as (select customerid from customers where customers.firstname = '
 
 (When did he place his orders) ?
 
-with williams as (select customerid from customers where customers.firstname = 'Sam' and lastname = 'Williams'), orders as ( select * from orders join williams on williams.customerid = orders.customerid) select orderdate from orders  
+with williams as (select customerid from customers where customers.firstname = 'Sam' and lastname = 'Williams'), orders as ( select * from orders join williams on williams.customerid = orders.customerid) select order-date from orders  
 
 4 => What are the two cheapest PINOCCHIO movies? (PINOCCHIO is the second part of the title of many of our movies).
 
@@ -45,10 +45,13 @@ you don't have to include 'id' as one of the columns to populate. It should do i
 In postgres,  SERIAL is the equivalent to auto-increment.
 (Hint: syntax for this is back on Unit01.md)
 
+ALTER TABLE reorder ADD COLUMN id SERIAL
 
 Question:  if you delete the final record of an auto-incrementing table, and that final record's auto-incremented
 value (id) was 9, what will be the the value of the next record inserted into the table?  In other words, delete 9,
 and what will the next record be?
+
+
 
 *send me the answer to this question*
 
